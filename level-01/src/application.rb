@@ -21,7 +21,7 @@ class Application
     info=""
       depts.each do |dept|
         if(dept.Dept_name == student_department)
-             if(dept.total <6 )
+             if(dept.total <30 )
                 return "You have been enrolled to #{student_department}\n#{dept.enroll student_name}"
                         
               else
