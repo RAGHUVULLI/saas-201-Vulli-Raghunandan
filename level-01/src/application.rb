@@ -75,7 +75,7 @@ class Application
         end
             dept_list.each do |dept|
                   dept.sec_List.each do |sec|
-                         if(section == sec.name && dept.Dept_name == flag)
+                         if(section == sec.name && dept.Dept_name == flag && sec.student_list.length < 10)
                                sec.student_list.push(student_name)
                                sec.student_list.sort();
                                str="You have been allotted section #{section}"
