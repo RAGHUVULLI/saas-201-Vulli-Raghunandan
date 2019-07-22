@@ -41,6 +41,22 @@ class Department
 		sec_list.push(@c)
 		return sec_list
 	end	
+	
+	
+	
+	def Total
+		sec_list=[]
+		sec_list.push(@a)
+		sec_list.push(@b)
+		sec_list.push(@c)
+		to=0
+		sec_List.each do|sec|
+ 			to+=sec.student_list.length;
+ 		end
+ 		return to
+	end	
+
+
 
 end
 
