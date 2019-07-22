@@ -21,11 +21,11 @@ class Application
     info=""
       depts.each do |dept|
         if(dept.Dept_name == student_department)
-             if(dept.total <30 )
+             if(dept.Total() < 60)
                 return "You have been enrolled to #{student_department}\n#{dept.enroll student_name}"
                         
               else
-                   "Error: Seats are not available in #{dept.Dept_name}"
+                 return  "Error: Seats are not available in #{dept.Dept_name}"
               end
         end
       end            
@@ -39,8 +39,14 @@ class Application
           dept_list.push(cse)
           dept_list.push(civil)
 
-          dept_list.each do |dept|
-                  
+           flag=""
+             dept_list.each do |dept|
+                  if(dept.Dept_name == student_department)
+                      flag=dept         
+                   end 
+        end
+
+                      if(flag.Total() < 60)                    
                            dept_list.each do |city|
 
                               sec=city.sec_List
@@ -53,8 +59,9 @@ class Application
                                   end
                                  end
                            end            
-                             return  enroll(student_name, student_department)
-          end               
+                              return enroll(student_name, student_department)
+                      end
+                      return "Error:No Seats available in #{student_department}"
   end
 
   def change_section(student_name, section)
@@ -63,7 +70,7 @@ class Application
         dept_list.each do |dept|
            dept.sec_List.each do |sec|
               sec.student_list.each do |stu|
-                  if(stu == student_name)
+                  if(stu == student_name )
                     
                        sec.student_list.delete(student_name)
                        sec.student_list.sort()
@@ -75,7 +82,7 @@ class Application
         end
             dept_list.each do |dept|
                   dept.sec_List.each do |sec|
-                         if(section == sec.name && dept.Dept_name == flag && sec.student_list.length < 10)
+                         if(section == sec.name && dept.Dept_name == flag && sec.student_list.length !=10)
                                sec.student_list.push(student_name)
                                sec.student_list.sort();
                                str="You have been allotted section #{section}"
@@ -83,7 +90,9 @@ class Application
                                   
                           end
                   end
-            end                          
+            end 
+
+            return "Error:No seats available in #{section}";                         
   end
 
   def department_view(student_dept)
