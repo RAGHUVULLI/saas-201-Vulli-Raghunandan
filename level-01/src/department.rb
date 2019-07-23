@@ -13,15 +13,15 @@ class Department
 	def enroll(student_name)
 		roll = 0
        	suc = 0
-     	 if a.num<2
+     	 if a.num<10
         	  roll = a.add(student_name)
            		suc = 'A'
           
-      	elsif b.num<2
+      	elsif b.num<10
           suc = 'B'
  		 roll = b.add(student_name)
          
-      	elsif c.num<2
+      	elsif c.num<10
          suc = 'C'
          roll = c.add(student_name)
 #        
