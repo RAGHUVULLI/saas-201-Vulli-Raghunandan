@@ -21,7 +21,7 @@ class Application
     info=""
       depts.each do |dept|
         if(dept.Dept_name == student_department)
-             if(dept.Total() < 60)
+             if(dept.Total() < 30)
                 return "You have been enrolled to #{student_department}\n#{dept.enroll student_name}"
                         
               else
@@ -46,7 +46,7 @@ class Application
                    end 
         end
 
-                      if(flag.Total() < 60)                    
+                      if(flag.Total() < 30)                    
                            dept_list.each do |city|
 
                               sec=city.sec_List
