@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          margin:10px;
+          box-sizing: border-box;
+          font-family: verdana;
+        }
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin-top: 10px;
+          margin-right: 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: right;
+          font-family: verdana;
+        }
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        .container {
+          border-radius: 5px;
+          padding: 20px;
+          background-image: url("data:image/jpeg;base64,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");
+        }
+        </style>
+</head>
+<body>
+    <h3 style="text-align: center;color: grey;font-family: verdana;font-weight: bold;">
+        ENROLL INTO A DEPARTMENT
+    </h3>
+
+    <form action="" style="margin-right: 300px;margin-left: 300px;">
+
+
+           
+            <div>
+                    <label for="rollnumber" style="font-weight: bold;font-family: verdana; font-size: 20px;margin: 10px;">Rollnumber:</label>
+                    <input type="text" id="fname" name="name" placeholder="Your roll number..">
+                  </div>
+   
+     <div>
+         <label for="department" style="font-weight: bold;font-family: verdana; font-size: 20px;margin: 10px;">Department:</label>
+         <select id="Department" name="Department">
+             <option value="EEE">EEE</option>
+             <option value="MECH">MECH</option>
+             <option value="CSE">CSE</option>
+             <option value="CIVIL">CIVIL</option>
+             
+             
+         </select>
+        </div>
+     
+        <form action=""><input type="submit" value="Request"></form>
+        <form action="index.html"><input type="submit" value="Go Back"></form>    
+    
+ </form>
+</body>
+</html>
